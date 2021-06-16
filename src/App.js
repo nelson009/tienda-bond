@@ -1,16 +1,14 @@
 import './App.css'
-import { NavBar } from './components/navBar/navBar'
+import { Home } from './screens'
+// import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <NavBar />
-        <h1>tienda-bond</h1>
-       
-      </header>
-    </div>
-  )
+    <>
+      < Home />
+      {/* < ItemListContainer greeting = {"catalogo de tienda-bond"} /> */}
+    </>
+  );
 }
 
-export default App
+export default App;
