@@ -1,12 +1,12 @@
 import './App.css'
-import { Home } from './screens'
-// import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
+import { NavBar } from './components/NavBar.js'
+import { ItemListContainer } from './components/ItemListContainer.js'
 
 function App() {
   return (
     <>
-      < Home />
-      {/* < ItemListContainer greeting = {"catalogo de tienda-bond"} /> */}
+      < NavBar />
+      <ItemListContainer greeting = {"catalogo de tienda-bond"}/>
     </>
   );
 }
