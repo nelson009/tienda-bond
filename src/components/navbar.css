@@ -19,3 +19,16 @@
 .navbar-container li:hover {
     border-bottom: 3px solid red;
 }
+
+.contador {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.numero {
+    margin: 0 10px;
+
+}
