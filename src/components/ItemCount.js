@@ -3,6 +3,7 @@ import './navbar.css'
 
 const ItemCount = ({ stock, initial, onAdd }) => {
     const [ contador, setContador ]= useState(initial)
+    const [ actualStock, setactualStock ] = useState(stock)
 
     const contadorMenos = () => {
         if(contador === 1){
@@ -10,6 +11,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         }
         else{
             setContador( contador -1)
+            setactualStock(actualStock +1)
         }
     }
 
@@ -19,8 +21,10 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         }
         else{
             setContador( contador +1)
+            setactualStock(actualStock -1)
         }
     }
+
     return(
         <div className= "contador">
             <p>tv Samsung 32"</p>
