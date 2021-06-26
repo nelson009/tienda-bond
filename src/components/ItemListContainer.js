@@ -27,7 +27,7 @@ const ItemListContainer = ({greeting}) => {
                 setItems(productos) 
             }
         )
-    },[items])
+    },[])
 
   
     return(

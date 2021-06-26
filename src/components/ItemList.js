@@ -1,5 +1,6 @@
 import React from 'react'
 import { Item } from './Item'
+import './item.css'
 
 const ItemList = ({items}) => {
     const productos = items.map((item)=>{
@@ -7,9 +8,10 @@ const ItemList = ({items}) => {
     }
     )
     return(
-        <>
-           {productos}
-        </>
+        <div className = "container">
+            {productos}
+        </div>
+       
     )
 }
 export { ItemList }
