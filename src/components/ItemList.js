@@ -4,12 +4,12 @@ import './item.css'
 
 const ItemList = ({items}) => {
     const productos = items.map((item)=>{
-        return <Item key= {item.id} item = {item}/>
+        return <Item key= {item.title} item = {item}/>
     }
     )
     return(
         <div className = "container">
-            {productos}
+            {productos.length === 0? (<p >cargando ...</p>):productos}
         </div>
        
     )

@@ -1,0 +1,24 @@
+[
+  
+    { 
+        "id": 2,
+        "title": "sony tv 55 4k xbr55x805H",
+        "price" : "$170.999" ,
+        "pictureUrl" : "https://images.fravega.com/s250/cd3fdb40dca9522c7df326678ad356d5.jpg",
+        "categoryId": "Tv,Audio y Video"
+    },
+    { 
+        "id": 3,
+        "title": "Celular Samsung Galaxy A32",
+        "price" : "$42.999" ,
+        "pictureUrl" : "https://images.fravega.com/s250/a17ab6f3ad0b86f06376c0947efe88f5.jpg",
+        "categoryId": "celulares"
+    },
+    { 
+        "id": 4,
+        "title": "Notebook Gamer ASUS TUF FX506 15.6 Core i5 10300H GTX 1650Ti 4GB 512GB Win10 144Hz",
+        "price" : "$150.760" ,
+        "pictureUrl" : "https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_26624_Notebook_Gamer_ASUS_TUF_FX506_15.6__Core_i5_10300H_GTX_1650Ti_4GB_512GB_Win10_144Hz_e99a3a4a-med.jpg",
+        "categoryId": "Notebooks"
+    }
+    ]
