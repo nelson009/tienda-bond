@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #c2c2c2;
+  background-color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,6 +16,7 @@
 
 .navbar .category {
   margin: 0 10px;
+  color: white;
 }
 
 .link {
@@ -29,14 +30,22 @@
 }
 
 .navbar li:hover {
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid white;
 }
 
+.cart {
+  background-color: #0093de;
+}
+.logo {
+  color: #0093de;
+  text-decoration: none;
+}
 .contador {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding-top: 30px;
 }
 
 .numero {

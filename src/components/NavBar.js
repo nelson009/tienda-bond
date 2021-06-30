@@ -5,7 +5,7 @@ import {CartWidget} from './CartWidget.js'
 const NavBar = () => {
     return(
         <nav className = "navbar" >
-            <Link to='/'>
+            <Link className= 'link' to='/'>
                 <h1  className = "logo">tienda-bond</h1>
             </Link>
         

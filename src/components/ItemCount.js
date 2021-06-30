@@ -27,7 +27,6 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
     return(
         <div className= "contador">
-            <p>tv Samsung 32"</p>
             <button className= "numero" onClick={() => contadorMenos()}>-</button>
             <p>{contador}</p>
             <button className= "numero" onClick={() => contadorMas()}>+</button>

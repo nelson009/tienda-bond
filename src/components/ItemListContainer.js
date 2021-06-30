@@ -24,8 +24,8 @@ const ItemListContainer = () => {
 
     return(
         <div>
-            <ItemCount stock = {5} initial = {1} />
             <ItemList items = {items}/>
+            <ItemCount stock = {5} initial = {1} />
         </div>
 
     )
