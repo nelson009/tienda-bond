@@ -40,7 +40,7 @@
   color: #0093de;
   text-decoration: none;
 }
-.contador {
+/* .contador {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -50,4 +50,4 @@
 
 .numero {
   margin: 0 10px;
-}
+} */

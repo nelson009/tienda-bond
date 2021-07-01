@@ -26,3 +26,15 @@
   margin: 20px;
   text-align: center;
 }
+
+.contador {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.numero {
+  margin: 0 10px;
+}

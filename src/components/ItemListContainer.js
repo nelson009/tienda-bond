@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
-import { ItemCount } from './ItemCount'
+// import { ItemCount } from './ItemCount'
 import { ItemList } from './ItemList'
 import catalogo from '../data/items.json'
  
@@ -25,7 +25,7 @@ const ItemListContainer = () => {
     return(
         <div>
             <ItemList items = {items}/>
-            <ItemCount stock = {5} initial = {1} />
+            {/* <ItemCount stock = {5} initial = {1} /> */}
         </div>
 
     )

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import './navbar.css'
-
+// import './navbar.css'
+import './item.css'
 const ItemCount = ({ stock, initial, onAdd }) => {
     const [ contador, setContador ]= useState(initial)
     const [ actualStock, setactualStock ] = useState(stock)
@@ -27,10 +27,10 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
     return(
         <div className= "contador">
-            <button className= "numero" onClick={() => contadorMenos()}>-</button>
+            <button className= "numero" onClick={contadorMenos}>-</button>
             <p>{contador}</p>
-            <button className= "numero" onClick={() => contadorMas()}>+</button>
-            <button>agregar al carrito</button>
+            <button className= "numero" onClick={contadorMas}>+</button>
+            <button disabled = {!stock} onClick={onAdd} value={contador}>agregar al carrito</button>
         </div>
     )
 }

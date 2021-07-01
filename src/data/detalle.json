@@ -1,0 +1,22 @@
+[  
+    {
+        "descripcion" : "Descripción: Experimentá su diseño El Galaxy A32 presenta un diseño ergonómico, elegante y delgado. Con la pantalla de 6.4 vas a poder sumergirte en tus juegos y videos favoritos. Además, con su tecnología Super AMOLED, de extremo a extremo, con un marco casi inexistente, el Galaxy A32 rediseña tus momentos de entretenimiento. Su resolución es de 1080 x 2400p (FHD+).",
+        "title": "Celular Galaxy A32",
+        "price" : "$999" ,
+        "pictureUrl" : "vhttps://images.fravega.com/s250/cd3fdb40dca9522c7df326678ad356d5.jpg.webp",
+        "id" : 2
+    },
+    {   
+        "descripcion" : "Descripción: Experimentá su diseño El Galaxy A32 presenta un diseño ergonómico, elegante y delgado. Con la pantalla de 6.4 vas a poder sumergirte en tus juegos y videos favoritos. Además, con su tecnología Super AMOLED, de extremo a extremo, con un marco casi inexistente, el Galaxy A32 rediseña tus momentos de entretenimiento. Su resolución es de 1080 x 2400p (FHD+).",
+        "title": "C Galaxy A32",
+        "price" : "$4" ,
+        "pictureUrl" : "https://images.fravega.com/s250/a17ab6f3ad0b86f06376c0947efe88f5.jpg",
+        "id" : 3
+    },
+    {"descripcion" : "Descripción: Experimentá su diseño El Galaxy A32 presenta un diseño ergonómico, elegante y delgado. Con la pantalla de 6.4 vas a poder sumergirte en tus juegos y videos favoritos. Además, con su tecnología Super AMOLED, de extremo a extremo, con un marco casi inexistente, el Galaxy A32 rediseña tus momentos de entretenimiento. Su resolución es de 1080 x 2400p (FHD+).",
+    "title" : "C Samsu A32",
+    "price" : "$42",
+    "pictureUrl" : "https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_26624_Notebook_Gamer_ASUS_TUF_FX506_15.6__Core_i5_10300H_GTX_1650Ti_4GB_512GB_Win10_144Hz_e99a3a4a-med.jpg",
+    "id" : 4
+    }
+]
