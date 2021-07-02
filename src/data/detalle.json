@@ -1,22 +1,25 @@
 [  
-    {
-        "descripcion" : "Descripción: Experimentá su diseño El Galaxy A32 presenta un diseño ergonómico, elegante y delgado. Con la pantalla de 6.4 vas a poder sumergirte en tus juegos y videos favoritos. Además, con su tecnología Super AMOLED, de extremo a extremo, con un marco casi inexistente, el Galaxy A32 rediseña tus momentos de entretenimiento. Su resolución es de 1080 x 2400p (FHD+).",
-        "title": "Celular Galaxy A32",
-        "price" : "$999" ,
-        "pictureUrl" : "vhttps://images.fravega.com/s250/cd3fdb40dca9522c7df326678ad356d5.jpg.webp",
-        "id" : 2
-    },
     {   
-        "descripcion" : "Descripción: Experimentá su diseño El Galaxy A32 presenta un diseño ergonómico, elegante y delgado. Con la pantalla de 6.4 vas a poder sumergirte en tus juegos y videos favoritos. Además, con su tecnología Super AMOLED, de extremo a extremo, con un marco casi inexistente, el Galaxy A32 rediseña tus momentos de entretenimiento. Su resolución es de 1080 x 2400p (FHD+).",
-        "title": "C Galaxy A32",
-        "price" : "$4" ,
-        "pictureUrl" : "https://images.fravega.com/s250/a17ab6f3ad0b86f06376c0947efe88f5.jpg",
-        "id" : 3
+        "id" : "2",
+        "descripcion" : "Características de la imagen:Al ampliar el espectro de colores, TRILUMINOS, con la tecnología de nuestros procesadores X1, reproduce más colores que un televisor convencional. Analiza y procesa los datos de cada imagen para hacer los colores aún más naturales y precisos, por lo que las imágenes son más realistas que nunca.Disfruta de increíbles imágenes en 4K, ricas en detalles y texturas reales, con la tecnología exclusiva de nuestro 4K HDR Processor X1™. Las imágenes grabadas en 2K e incluso en Full HD se mejoran a una resolución cercana a 4K mediante 4K X-Reality™ PRO con una exclusiva base de datos 4K.",
+        "title": "sony tv 55 4k xbr55x805H",
+        "price" : "$170.999" ,
+        "pictureUrl" : "https://images.fravega.com/s250/cd3fdb40dca9522c7df326678ad356d5.jpg.webp"
+        
     },
-    {"descripcion" : "Descripción: Experimentá su diseño El Galaxy A32 presenta un diseño ergonómico, elegante y delgado. Con la pantalla de 6.4 vas a poder sumergirte en tus juegos y videos favoritos. Además, con su tecnología Super AMOLED, de extremo a extremo, con un marco casi inexistente, el Galaxy A32 rediseña tus momentos de entretenimiento. Su resolución es de 1080 x 2400p (FHD+).",
-    "title" : "C Samsu A32",
-    "price" : "$42",
-    "pictureUrl" : "https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_26624_Notebook_Gamer_ASUS_TUF_FX506_15.6__Core_i5_10300H_GTX_1650Ti_4GB_512GB_Win10_144Hz_e99a3a4a-med.jpg",
-    "id" : 4
+    {  
+         "id" : "3" ,
+        "descripcion" : "Descripción: Experimentá su diseño El Galaxy A32 presenta un diseño ergonómico, elegante y delgado. Con la pantalla de 6.4 vas a poder sumergirte en tus juegos y videos favoritos. Además, con su tecnología Super AMOLED, de extremo a extremo, con un marco casi inexistente, el Galaxy A32 rediseña tus momentos de entretenimiento. Su resolución es de 1080 x 2400p (FHD+).",
+        "title": "Celular Samsung Galaxy A32",
+        "price" : "$42.999" ,
+        "pictureUrl" : "https://images.fravega.com/s250/a17ab6f3ad0b86f06376c0947efe88f5.jpg"
+        
+    },
+    {   "id" : "4",
+        "descripcion" : "Sombras de Turing Con la ejecución simultánea de operaciones de punto flotante y números enteros, tecnología de sombreado adaptativo y una nueva arquitectura de memoria unificada con el doble de caché que su predecesor, los sombreadores Turing permiten incrementos increíbles en el rendimiento en los juegos de hoy.",
+        "title" : "Notebook Gamer ASUS TUF FX506 15.6 Core i5 10300H GTX 1650Ti 4GB 512GB Win10 144Hz",
+        "price" : "$150.760",
+        "pictureUrl" : "https://www.venex.com.ar/products_images/1611857711_1603554208_1597178093_1596831118_09_4.jpg"
+        
     }
 ]

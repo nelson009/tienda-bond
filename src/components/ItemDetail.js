@@ -7,16 +7,16 @@ const ItemDetail = ({item}) => {
     const [ valorGuardado, setvalorGuardado ] = useState('')
     const onAdd =(e)=>{
         setvalorGuardado(e.target.value)
-       
     }
+    
     return(
-        <div className = "container">
+        <div className = "container" id={item.id}>
             <div className ="item-detalle">
                 <p>{item.title}</p>
                 <img src={item.pictureUrl} alt='imagen'></img>
                 <p>{item.price}</p>
-                <p>{item.descripcion}</p> 
                 <p>{valorGuardado}</p>
+                <p>{item.descripcion}</p> 
             </div>
             {valorGuardado?
             (<div className= "contador">

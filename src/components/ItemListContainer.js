@@ -5,13 +5,13 @@ import { ItemList } from './ItemList'
 import catalogo from '../data/items.json'
  
 const ItemListContainer = () => {
-    const { id } = useParams()
+    const { categoryId } = useParams()
     const [ items, setItems ] = useState([])
     useEffect(() => {
         const getItems = new Promise((resolve) =>{
             setTimeout(() => {
                 resolve(
-                    id ? catalogo.filter((item) => item.categoryId === id) : catalogo
+                    categoryId ? catalogo.filter((item) => item.categoryId === categoryId) : catalogo
                )
             }, 2000)
         })
@@ -19,8 +19,11 @@ const ItemListContainer = () => {
             (productos) =>{
                 setItems(productos) 
             }
+          
+               
         )
-    },[id])
+        
+    },[categoryId])
 
     return(
         <div>

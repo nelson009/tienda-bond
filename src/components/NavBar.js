@@ -10,7 +10,7 @@ const NavBar = () => {
             </Link>
         
             <ul className = "categories" >
-                <NavLink activeClassName= 'link-active' className= 'link' to='/category/Tv,Audio y Video'>
+                <NavLink activeClassName= 'link-active' className= 'link' to='/category/Tv-Audio-Video'>
                     <li className = "category">Tv,Audio y Video</li>
                 </NavLink>
                 <NavLink activeClassName= 'link-active' className= 'link' to='/category/celulares'>
