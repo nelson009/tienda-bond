@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 // import { ItemCount } from './ItemCount'
 import { ItemList } from './ItemList'
 import catalogo from '../data/items.json'
- 
+
 const ItemListContainer = () => {
+    
     const { categoryId } = useParams()
     const [ items, setItems ] = useState([])
     useEffect(() => {
@@ -16,10 +17,9 @@ const ItemListContainer = () => {
             }, 2000)
         })
         getItems.then(
-            (productos) =>{
-                setItems(productos) 
+            (producto) =>{  
+                setItems(producto)   
             }
-          
                
         )
         

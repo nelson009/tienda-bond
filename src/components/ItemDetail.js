@@ -1,17 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState,useContext } from 'react'
 import './item.css'
 import { ItemCount } from './ItemCount' 
 import { Link } from 'react-router-dom'
+import { CartContext } from '../context/cartContext'
 
 const ItemDetail = ({item}) => {
-    const [ valorGuardado, setvalorGuardado ] = useState('')
-    const onAdd =(e)=>{
-        setvalorGuardado(e.target.value)
+
+    const {addItem} = useContext(CartContext)
+    const [ valorGuardado, setvalorGuardado ] = useState(0)
+    const onAdd =(quantity)=>{
+        setvalorGuardado(quantity)
+        addItem(item,quantity)
     }
     
     return(
         <div className = "container" id={item.id}>
             <div className ="item-detalle">
+                <p>id:{item.id}</p>
                 <p>{item.title}</p>
                 <img src={item.pictureUrl} alt='imagen'></img>
                 <p>{item.price}</p>
@@ -22,7 +27,8 @@ const ItemDetail = ({item}) => {
             (<div className= "contador">
                 <Link  to='/cart '><button >Terminar mi compra</button></Link>
             </div>):
-            (<ItemCount stock = {5} initial = {1} onAdd={onAdd} />)}
+            // (<ItemCount stock = {5} initial = {1} onAdd={onAdd} />)}
+            (<ItemCount stock = {5} initial = {1} onAdd={onAdd}/>)}
         </div>
     )
 }

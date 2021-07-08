@@ -5,8 +5,8 @@ import detalle from '../data/detalle.json'
 const ItemDetailContainer = () => {
     
     const {title} = useParams()
-    const [ item, setItem ] = useState ([])
-    console.log(title)
+    const [ item, setItem ] = useState (undefined)
+    // console.log(title)
     useEffect(() => {
         
         const getItem = new Promise((resolve) =>{
@@ -22,10 +22,6 @@ const ItemDetailContainer = () => {
             }
                  
         )
-        getItem.then(
-        console.log(detalle)
-        )
-    
     },[title])
   
     return(
