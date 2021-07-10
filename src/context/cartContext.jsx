@@ -3,24 +3,37 @@ import { createContext,useState } from "react";
 export const CartContext = createContext()
 
 export const CartProvider = ({children}) => {
-
-    const [cart, setCart] = useState ([])
-    // const isInCart = (id) => {
-    //   return lista.some((product)=> product.id === id )
+    //  const agregarItem = (ite,quantity) => {
+    //     setCart([...cart,{ite,quantity}])
     // }
-    // const agregarItem = (item) => {setCart({...cart,item})}
-
+    const [cart, setCart] = useState ([])
+    const isInCart = (id) => {
+      return cart.some((obj)=> obj.item.id === id )
+    }
     console.log(cart)
-    const addItem = (item,quantity)=> setCart({item,quantity})
+    const addItem = (item,quantity)=> {
+        if(isInCart(item.id)){
+            const object = cart.find(obj => obj.item.id === item.id)
+            object.quantity = object.quantity+quantity
+            console.log("Item ya existente")
+            console.log(`${item.title} X${object.quantity}`)
+        }else{
+            addInCart({item,quantity})
+        }    
+    }
+
+    const addInCart = (obj)=>{
+        setCart([...cart, obj])
+    }
 
     const removeItem = (itemId) =>{
-        let removerElemento = cart.findIndex((elemento)=> elemento.id ===itemId)
+        let removerElemento = cart.findIndex((obj)=> obj.item.id ===itemId)
         cart.splice(removerElemento,1)  
     }
     const clear= () =>cart.splice(0)
-    
+
     return (
-        <CartContext.Provider value ={{addItem,clear,removeItem}}>{children}</CartContext.Provider>
+        <CartContext.Provider value ={{addItem,clear,removeItem,cart}}>{children}</CartContext.Provider>
     )
    
 }
