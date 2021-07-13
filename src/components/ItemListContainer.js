@@ -14,7 +14,7 @@ const ItemListContainer = () => {
                 resolve(
                     categoryId ? catalogo.filter((item) => item.categoryId === categoryId) : catalogo
                )
-            }, 2000)
+            },500)
         })
         getItems.then(
             (producto) =>{  

@@ -5,7 +5,15 @@
   align-items: center;
   padding: 4px 12px;
 }
-
+.carrito-suma {
+  background-color: white;
+  border-radius: 10px;
+  padding-right: 7px;
+  padding-left: 6px;
+}
+.carrito-invisible {
+  display: none;
+}
 .navbar .categories {
   display: flex;
   justify-content: center;

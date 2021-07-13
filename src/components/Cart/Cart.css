@@ -1,0 +1,17 @@
+.back {
+  padding: 12px;
+  background-color: #0093de;
+  border-radius: 7px;
+  color: white;
+  text-decoration: none;
+}
+
+.detalle-cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.titulo {
+  text-align: center;
+}

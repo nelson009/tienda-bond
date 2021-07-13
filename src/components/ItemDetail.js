@@ -25,7 +25,7 @@ const ItemDetail = ({item}) => {
             </div>
             {valorGuardado?
             (<div className= "contador">
-                <Link  to='/cart '><button >Terminar mi compra</button></Link>
+                <Link  to='/cart'><button >Terminar mi compra</button></Link>
             </div>):
             // (<ItemCount stock = {5} initial = {1} onAdd={onAdd} />)}
             (<ItemCount stock = {5} initial = {1} onAdd={onAdd}/>)}
