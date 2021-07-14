@@ -16,7 +16,7 @@ export const App = () => {
           <Route exact path= '/category/:categoryId'>
             <ItemListContainer/>
           </Route>
-          <Route exact path= '/item/:title'>
+          <Route exact path= '/item/:categories'>
             <ItemDetailContainer/>
           </Route>
           <Route exact path= '/cart'>

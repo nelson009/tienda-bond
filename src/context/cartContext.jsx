@@ -1,9 +1,10 @@
-import { createContext,useState } from "react";
+import { createContext,useState,useEffect} from "react";
 
 export const CartContext = createContext()
 
 export const CartProvider = ({children}) => {
     const [cart, setCart] = useState ([])
+    const [estadoWidget,setEstadoWidget] = useState(0)
     const isInCart = (id) => {
       return cart.some((obj)=> obj.item.id === id )
     }
@@ -13,6 +14,9 @@ export const CartProvider = ({children}) => {
             object.quantity = object.quantity+quantity
             console.log("Item ya existente")
             console.log(`${item.title} X${object.quantity}`)
+            const copia = [...cart].map(({quantity})=>quantity)
+            .reduce((totalAcomulado,itemQuantity)=>totalAcomulado+itemQuantity,0)
+            setEstadoWidget(copia)
         }else{
             addInCart({item,quantity})
         }    
@@ -28,8 +32,17 @@ export const CartProvider = ({children}) => {
     const clear= () =>{
         setCart([])
         }
+  
+    useEffect(()=>{
+        const sumaWidget =cart.map
+        (({quantity})=>quantity)
+        .reduce((totalAcomulado,itemQuantity)=>totalAcomulado+itemQuantity,0)
+        console.log(sumaWidget)
+        setEstadoWidget(sumaWidget)
+    },[cart])
+    
     return (
-        <CartContext.Provider value ={{addItem,clear,removeItem,cart}}>{children}</CartContext.Provider>
+        <CartContext.Provider value ={{addItem,clear,removeItem,cart,estadoWidget}}>{children}</CartContext.Provider>
     )
    
 }

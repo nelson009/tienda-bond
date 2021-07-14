@@ -6,7 +6,7 @@ import './Cart.css'
 
 const Cart = () => {
     const {cart,removeItem,clear} = useContext(CartContext)
-    console.log(cart)
+    // console.log(cart)
 
     const totalPrecio = () => {
         if(cart.length > 0){
@@ -14,7 +14,7 @@ const Cart = () => {
         return precioTotal.reduce((acumulado,item)=>acumulado+item,0)
         }
     }
-    console.log(removeItem)
+    // console.log(removeItem)
     return(
         <>
             <h1 className='titulo'>Carrito de compras</h1>

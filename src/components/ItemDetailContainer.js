@@ -4,7 +4,7 @@ import { ItemDetail } from './ItemDetail'
 import detalle from '../data/detalle.json'
 const ItemDetailContainer = () => {
     
-    const {title} = useParams()
+    const {categories} = useParams()
     const [ item, setItem ] = useState (undefined)
     // console.log(title)
     useEffect(() => {
@@ -12,7 +12,7 @@ const ItemDetailContainer = () => {
         const getItem = new Promise((resolve) =>{
             setTimeout(() => {
                 resolve(
-                    detalle.filter((i) => i.id === title) 
+                    detalle.filter((i) => i.id === categories) 
                 )
             },500)
         })
@@ -22,7 +22,7 @@ const ItemDetailContainer = () => {
             }
                  
         )
-    },[title])
+    },[categories])
   
     return(
             <>
