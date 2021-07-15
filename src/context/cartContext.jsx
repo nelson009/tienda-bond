@@ -40,7 +40,7 @@ export const CartProvider = ({children}) => {
         console.log(sumaWidget)
         setEstadoWidget(sumaWidget)
     },[cart])
-    
+    console.log(cart)
     return (
         <CartContext.Provider value ={{addItem,clear,removeItem,cart,estadoWidget}}>{children}</CartContext.Provider>
     )

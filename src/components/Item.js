@@ -10,6 +10,7 @@ const Item = ({item}) => {
                 <img src={item.pictureUrl} alt='foto del producto'/>
                 <p>{item.title}</p>
                 <p>{item.price}</p>
+                <p>{item.id}</p>
             </div>
         </Link>
         {/* <ItemCount stock = {5} initial = {1} /> */}

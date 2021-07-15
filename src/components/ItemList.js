@@ -9,7 +9,8 @@ const ItemList = ({items}) => {
     )
     return(
         <div className = "container">
-            {productos.length === 0? (<p >cargando ...</p>):productos}
+            {/* {productos.length === 0? (<p >cargando ...</p>):productos} */}
+            {productos.length === 0? (<p >loading...</p>):productos}
         </div>
        
     )
