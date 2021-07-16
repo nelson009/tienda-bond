@@ -8,9 +8,9 @@ const Item = ({item}) => {
         <Link to={`/item/${item.id}`}>
             <div className ="item-container">
                 <img src={item.pictureUrl} alt='foto del producto'/>
-                <p>{item.title}</p>
-                <p>{item.price}</p>
-                <p>{item.id}</p>
+                <h3>{item.title}</h3>
+                <p>${item.price}</p>
+                {/* <p>{item.id}</p> */}
             </div>
         </Link>
         {/* <ItemCount stock = {5} initial = {1} /> */}

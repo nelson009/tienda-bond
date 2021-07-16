@@ -19,7 +19,7 @@ const ItemDetail = ({item}) => {
                 
                 <h3>{item.title} Id:{item.id}</h3>
                 <img src={item.pictureUrl} alt='imagen'></img>
-                <p>{item.price}</p>
+                <p>${item.price}</p>
                 <p>{valorGuardado}</p>
                 <p>{item.descripcion}</p> 
             </div>

@@ -26,34 +26,34 @@ const ItemDetailContainer = () => {
                  
     //     )
     // },[categories])
-    const [loading,setLoading] = useState()
-    const [ item, setItem ] = useState ([])
+
+    // const [loading,setLoading] = useState()
+    const [ item, setItem ] = useState (undefined)
     
     useEffect(()=>{
         // const db = getFirestore()
         const db = dataBase
         const itemCollection=db.collection('productos').doc(categories)
-        // const item = itemCollection.doc(categories)
-
         itemCollection.get().then((doc)=>{
             if (!doc.exists){
                 console.log('El item no existe!')
                 return
             }
+
             console.log('Item encontrado')
             setItem({id: doc.id, ...doc.data()})
         }).catch((error)=>{
             console.log('Error buscando items', error)
         }).finally(()=>{
-            setLoading(false)
+            // setLoading(false)
         })
     }, [categories]) 
     return(
             <>
-            <ItemDetail item= {item} loading={loading}/>
-                {/* {item ? (<ItemDetail item= {item} /> )
+            {/* <ItemDetail item= {item} loading={loading}/> */}
+                {item ? (<ItemDetail item= {item} /> )
                 : (<p className = "contador">cargando detalle</p>)
-                } */}
+                }
                 
             </>
     )
