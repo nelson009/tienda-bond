@@ -1,10 +1,15 @@
 import { createContext,useState,useEffect} from "react";
-
+import { dataBase } from '../Firebase/firebase'
 export const CartContext = createContext()
+
 
 export const CartProvider = ({children}) => {
     const [cart, setCart] = useState ([])
     const [estadoWidget,setEstadoWidget] = useState(0)
+    const [buyer,setBuyer] = useState({nombre:"",apellido:"", email:"",telefono:""})
+    const [total,setTotal] = useState(0)
+    const [orderId , setOrderId] = useState()
+
     const isInCart = (id) => {
       return cart.some((obj)=> obj.item.id === id )
     }
@@ -40,9 +45,36 @@ export const CartProvider = ({children}) => {
         console.log(sumaWidget)
         setEstadoWidget(sumaWidget)
     },[cart])
-    console.log(cart)
+    // console.log(cart)
+    useEffect(() =>{
+        const nextTotal = cart
+        .map(({item,quantity}) => item.price * quantity).reduce((acumulador,precioActual) => acumulador + precioActual,0)
+        setTotal(nextTotal)
+        console.log(nextTotal)
+    },[cart])
+
+    const getOrder = () => {
+        const items = cart.map(({item}) => ({id:item.id, title:item.title, price:item.price}))
+        return {
+            buyer,
+            items,
+            total,
+         }
+    }
+    console.log(getOrder())
+    const subida = () => {
+        const db = dataBase
+        const orders = db.collection("orders")
+        orders.add(getOrder()).then(({id}) => {
+            setOrderId(id);
+        })
+        }
+
     return (
-        <CartContext.Provider value ={{addItem,clear,removeItem,cart,estadoWidget}}>{children}</CartContext.Provider>
+        <CartContext.Provider value =
+        {{addItem,clear,removeItem,cart,estadoWidget,setBuyer,buyer,total,subida,orderId}}
+        >{children}
+        </CartContext.Provider>
     )
    
 }

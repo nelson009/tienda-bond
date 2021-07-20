@@ -15,3 +15,11 @@
 .titulo {
   text-align: center;
 }
+
+.form {
+  display: flex;
+  justify-content: center;
+  color: #0093de;
+  text-decoration: none;
+  align-items: center;
+}
