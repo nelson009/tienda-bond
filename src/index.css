@@ -5,6 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(https://www.wallpaperuse.com/wallp/11-116151_m.jpg);
+}
+
+p {
+  color: grey;
 }
 
 code {

@@ -1,11 +1,32 @@
 .title {
-  text-align: center;
+  color: #0093de;
 }
 
 .datos-peronales {
-  text-align: center;
+  width: 500px;
+  margin-top: 15px;
+  box-shadow: 3px 5px 10px white;
 }
 
 .color {
-  color: #0093de;
+  color: red;
+  margin-bottom: 20px;
+  /* font-weight: 700; */
+}
+
+.botton-Checkout {
+  margin-top: 36px;
+  margin-bottom: 10px;
+}
+
+.main-checkout {
+  width: 70%;
+  margin: auto;
+  background-color: black;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

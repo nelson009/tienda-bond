@@ -1,39 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import { ItemDetail } from './ItemDetail'
-// import detalle from '../data/detalle.json'
-// import catalogo from '../data/items.json'
 import { dataBase } from '../Firebase/firebase'
-
+import { Spiner } from './spiner'
 const ItemDetailContainer = () => {
     
-    const {categories} = useParams()
-    // const [ item, setItem ] = useState (undefined)
-    // // console.log(title)
-    // useEffect(() => {
-        
-    //     const getItem = new Promise((resolve) =>{
-    //         setTimeout(() => {
-    //             resolve(
-    //                 catalogo.filter((i) => i.id === parseFloat(categories)) 
-    //             )
-    //         },500)
-    //     })
-    //     getItem.then(
-    //         (detalles) =>{  
-    //             setItem(detalles[0])   
-    //         }
-                 
-    //     )
-    // },[categories])
-
-    // const [loading,setLoading] = useState()
+    const {itemId} = useParams()
     const [ item, setItem ] = useState (undefined)
     
     useEffect(()=>{
-        // const db = getFirestore()
         const db = dataBase
-        const itemCollection=db.collection('productos').doc(categories)
+        const itemCollection=db.collection('productos').doc(itemId)
         itemCollection.get().then((doc)=>{
             if (!doc.exists){
                 console.log('El item no existe!')
@@ -44,18 +21,16 @@ const ItemDetailContainer = () => {
             setItem({id: doc.id, ...doc.data()})
         }).catch((error)=>{
             console.log('Error buscando items', error)
-        }).finally(()=>{
-            // setLoading(false)
         })
-    }, [categories]) 
+    }, [itemId]) 
     return(
-            <>
-            {/* <ItemDetail item= {item} loading={loading}/> */}
-                {item ? (<ItemDetail item= {item} /> )
-                : (<p className = "contador">cargando detalle</p>)
-                }
+        <>
+           
+            {item ? (<ItemDetail item= {item} /> )
+            : (<Spiner/>)
+            }
                 
-            </>
+        </>
     )
 }
 export { ItemDetailContainer }

@@ -6,7 +6,7 @@ export const CartContext = createContext()
 export const CartProvider = ({children}) => {
     const [cart, setCart] = useState ([])
     const [estadoWidget,setEstadoWidget] = useState(0)
-    const [buyer,setBuyer] = useState({nombre:"",apellido:"", email:"",telefono:""})
+    const [buyer,setBuyer] = useState({nombre:"",apellido:"", email:"",confirmarEmail:""})
     const [total,setTotal] = useState(0)
     const [orderId , setOrderId] = useState()
 
@@ -36,6 +36,8 @@ export const CartProvider = ({children}) => {
     }
     const clear= () =>{
         setCart([])
+        setBuyer({nombre:"",apellido:"", email:"",confirmarEmail:""})
+        setOrderId(undefined)
         }
   
     useEffect(()=>{
@@ -70,6 +72,7 @@ export const CartProvider = ({children}) => {
         })
         }
 
+     
     return (
         <CartContext.Provider value =
         {{addItem,clear,removeItem,cart,estadoWidget,setBuyer,buyer,total,subida,orderId}}

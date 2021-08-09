@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Roboto:wght@400;700&display=swap");
+.flex-detail {
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.item-detalle {
+  width: 780px;
+  height: 500px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  background-color: black;
+  margin-left: 15px;
+}
+
+.title-detail {
+  color: #0093de;
+  text-align: center;
+}
+
+.descripcion-detail {
+  margin-top: 40px;
+  margin-left: 20px;
+  font-weight: 700;
+}
+
+.price-detail {
+  color: red;
+  margin-top: 40px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.contador {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 13px;
+}
+
+.btn-mas-menos {
+  height: 40px;
+  width: 40px;
+  margin: 0 10px;
+  border-radius: 20px;
+  font-size: 25px;
+}
+.btn-noLink {
+  width: 140px;
+  height: 40px;
+  margin: 0 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  font-weight: 700;
+}
+.btn-noLink:hover {
+  background-color: #0093de;
+}
+
+.flex-detail:hover {
+  box-shadow: 3px 5px 25px white;
+}
+.btn-mas-menos:hover {
+  background-color: #0093de;
+}
+.imagen-detail {
+  transition: all 500ms ease;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.imagen-detail:hover {
+  transform: scale(1.2);
+}
+
+.container-imagen {
+  overflow: hidden;
+
+  padding: 0;
+  height: 500px;
+}
+
+img {
+  transition: all 500ms ease;
+  cursor: pointer;
+}
+img:hover {
+  transform: scale(1.2);
+  transition: all 500ms ease;
+}

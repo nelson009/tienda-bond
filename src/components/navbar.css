@@ -1,5 +1,6 @@
 .navbar {
-  background-color: black;
+  /* background-color: #4a4a4a; */
+  background-color: #1c2434;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,6 +48,19 @@
 .logo {
   color: #0093de;
   text-decoration: none;
+  margin-bottom: 7px;
+}
+/* .estrella {
+  margin-top: 3px;
+} */
+
+.flex-logo1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: red;
+  color: blue;
 }
 /* .contador {
   display: flex;

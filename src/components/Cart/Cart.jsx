@@ -1,91 +1,131 @@
-import React, { useContext } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { CartContext } from "../../context/cartContext"
 import cancelar from '../../assets/icons/eliminar.png'
 import { Link } from "react-router-dom"
 import './Cart.css'
+import { Input } from '../input'
+import { Checkout } from '../checkout/checkout'
 
-const Cart = () => {
-    const {cart,removeItem,clear,buyer,setBuyer,total,subida} = useContext(CartContext)
-    // const [datosFormulario,setDatosFormulario] = useState({nombre:"",apellido:"", email:"",telefono:""})
-    // state ={nombre:"", email:""}
+export const Cart = () => {
+    const {cart,removeItem,clear,buyer,setBuyer,total,subida,orderId} = useContext(CartContext)
+    const [disabled,setDisabled] = useState(true)
     const valueDatosFormulario = ({name,value}) => {
         setBuyer({...buyer, [name]: value})
     } 
-    // const valueDatosFormulario = ({name,value}) => {
-    //     this.sestate(state()=>{
-    //         return { [name]: value}
-    //     })
-       
-    // } 
-    console.log(buyer)
-    // const totalPrecio = () => {
-    //     if(cart.length > 0){
-    //     let precioTotal= cart.map(((obj) =>(obj.item.price * obj.quantity)))
-    //     return precioTotal.reduce((acumulado,item)=>acumulado+item,0)
-    //     }
-    // }
-    // console.log(removeItem)
-    return(
-        <>
-            <h1 className='titulo'>Carrito de compras</h1>
-            {!cart.length?
-            <div className='detalle-cart'>
-            <h3>NO HAY PRODUCTOS EN EL CARRITO</h3>
-            <Link to='/' className= 'back'>Volver al home</Link>
-            </div> 
-            :
-        <>
-            {cart.map((obj)=>
-            <div key={obj.item.id} className='detalle-cart'>
-                <img src={obj.item.pictureMini} alt='imagen del producto'/>
-                <h4>{obj.item.title} (X{obj.quantity}) ${(obj.item.price)*(obj.quantity)}</h4>
-                <img  src={cancelar} alt='cart' height='30px' width='30px' onClick={()=>removeItem(obj.item.id)}/> 
-            </div>)}
-            <div className='detalle-cart'>
-                <button onClick={clear} >Eliminar productos</button>
-                {/* <h3>Total: ${totalPrecio()}</h3> */}
-                <h3>Total: ${total}</h3>
-            </div>
-            <div>
-                <form action="" className='form'>
-                    <label htmlFor="nombre"> Nombre: </label>
-                    <input
-                        name="nombre"
-                        type= "text"
-                        placeholder= "ingresa tu nombre"
-                        onChange={(e) => valueDatosFormulario(e.target)}
-                    />
-                    <label htmlFor="apellido"> Apellido: </label>
-                    <input
-                        name="apellido"
-                        type= "text"
-                        placeholder= "ingresa tu apellido"
-                        onChange={(e) => valueDatosFormulario(e.target)}
-                    />
-                    <label htmlFor="email"> Correo Electronico: </label>
-                    <input
-                        name="email"
-                        type= "email"
-                        placeholder= "ejemplo@gmai.com"
-                        onChange={(e) => valueDatosFormulario(e.target)}
-                    />
-                    <label htmlFor="apellido"> Telefono: </label>
-                    <input
-                        name="telefono"
-                        type= "text"
-                        placeholder= "ingresa tu numero de cel"
-                        onChange={(e) => valueDatosFormulario(e.target)}
-                    />
-                </form>
-                <>
-                <br></br>
-                <Link to = '/Checkout' className='form'><button onClick= {()=>subida()} className='color'>Terminar compra</button></Link>
-                </>
-            </div>
-        </>
-            
+
+
+    useEffect(()=>{
+        if(cart.length > 0 ){
+            if(buyer.email  === buyer.confirmarEmail && buyer.email  && buyer.confirmarEmail !== " " ){
+                setDisabled(false)  
+            }else{
+                setDisabled(true) 
             }
-        </>
+    }
+    },[cart,buyer,orderId])
+   
+    return(
+       
+        <main className= {orderId?'main-checkout': 'flex-cart'}>
+
+            {!orderId?
+            <>
+                <h1 className='titulo-cart'>Carrito de compras</h1>
+                {!cart.length?
+                <div className='detalle-cart'>
+                <h3 className ="sin-products">NO HAY PRODUCTOS EN EL CARRITO</h3>
+                <Link to='/' className= 'back' >Volver al home</Link>
+                </div>
+                :
+            <>
+                
+                    <div className='detalle-cart'>
+                        <p className="name-0">Imagen</p>
+                        <p className="name-1">Producto</p>
+                        <p className="tamaño-letra">Cantidad</p>
+                        <p className="tamaño-letra">Subtotal</p>
+                        <p className="tamaño-letra">Eliminar</p>
+                    </div>
+                <>
+                    {cart.map(({item,quantity})=>(
+                    <div key={item.id} className='detalle-cart'>
+                        <div> <img src={item.pictureMini} alt='imagen del producto'/></div>
+                        <p className="name-1">{item.title}</p>
+                        <p className="tamaño-letra">(X{quantity})</p>
+                        <p className="tamaño-letra">${(item.price)*(quantity)}</p>
+                        <img className="image-cancel" src={cancelar} alt='cart' height='30px' width='30px' onClick={()=>removeItem(item.id)}/>
+                    </div>))}
+
+                    <div className='div-precio-eliminar'>
+                        <p className="price-total"><span className="error">Total:</span> ${total}</p>
+                        <button onClick={clear} className="back" >Eliminar productos</button>
+                
+                    </div>
+
+                    <div>
+                        <form action="" className='form'>
+                        
+                            <Input
+                                id = "nombre"
+                                name="nombre"
+                                label= "nombre"
+                                placeholder="ingrese su nombre "
+                                type="text"
+                                onChange={(e) => valueDatosFormulario(e.target)}
+                            />
+                        
+                            <Input
+                                id = "apellido"
+                                name="apellido"
+                                label= "Apellido"
+                                placeholder="ingrese su apellido"
+                                type="text"
+                                onChange={(e) => valueDatosFormulario(e.target)}
+                            />
+                        
+                            <Input
+                                id = "email"
+                                name="email"
+                                label= "e-mail"
+                                placeholder="ejemplo@gmai.com"
+                                type="email"
+                                onChange={(e) => valueDatosFormulario(e.target)}
+                                p="llene todos los campos"
+                            />
+
+                            <Input
+                                id = "telefono"
+                                name="confirmarEmail"
+                                label= "Confirmar e-mail"
+                                placeholder="ingresa tu numero de cel"
+                                type="text"
+                                onChange={(e) => valueDatosFormulario(e.target)}
+                                
+                            />
+
+                        </form>
+                   
+                            <div className = "contenedor-button-centrado">
+                                <Link to = '/Checkout'   >
+                                    <button 
+                                    id="terminar"
+                                    onClick= {()=>subida()} 
+                                    className= 'btn-noLink'
+                                    type = "submite"
+                                    disabled ={disabled}
+                                    >Terminar compra
+                                    </button>
+                                </Link>
+                            </div>
+                    </div>
+                </>
+            </>
+            } 
+            </>:
+                <Checkout/>
+            }
+            
+        </main>
     )
 }
-export { Cart }
+

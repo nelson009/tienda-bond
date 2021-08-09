@@ -1,25 +1,147 @@
-.back {
-  padding: 12px;
-  background-color: #0093de;
-  border-radius: 7px;
-  color: white;
-  text-decoration: none;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Roboto:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
 }
 
+.name-0 {
+  flex-basis: 100px;
+  margin-left: 20px;
+  /* text-align: center; */
+}
+.name-1 {
+  flex-basis: 200px;
+  color: white;
+  /* color: #0075ff; */
+  font-weight: 700;
+}
+
+.tamaño-letra {
+  font-weight: 700;
+  color: white;
+}
+.sin-products {
+  color: red;
+  flex-grow: 2;
+}
 .detalle-cart {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  box-shadow: 3px 5px 10px white;
+}
+.div-precio-eliminar {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
 }
 
-.titulo {
+.titulo-cart {
   text-align: center;
+  color: antiquewhite;
+}
+
+.price-total {
+  color: antiquewhite;
+  margin-right: 10px;
+  font-weight: 700;
+}
+
+.flex-cart {
+  width: 70%;
+  margin: auto;
+  padding: 40px;
+  box-shadow: 3px 5px 25px white;
+  background-color: black;
+  margin-top: 20px;
+}
+
+.error {
+  /* color: #bb2929; */
+  color: red;
+  font-weight: 700;
 }
 
 .form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 800px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+}
+
+.input-usuario {
+  color: antiquewhite;
+  display: block;
+  font-weight: 700;
+  padding: 10px;
+  min-height: 40px;
+  cursor: pointer;
+}
+
+.style-input {
+  width: 100%;
+  background: #fff;
+  border-radius: 3px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 40px 0 10px;
+  transition: 0.3s ease all;
+  border: 3px solid transparent;
+}
+.style-input:focus {
+  border: 3px solid #0075ff;
+  outline: none;
+  box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.leyenda-error {
+  font-size: 12px;
+  margin-bottom: 0;
+  color: #bb2929;
+}
+
+.contenedor-button-centrado {
   display: flex;
-  justify-content: center;
-  color: #0093de;
-  text-decoration: none;
+  flex-direction: column;
   align-items: center;
+  grid-column: span 2;
+}
+.back {
+  height: 45px;
+  /* width: 30%; */
+  width: 14%;
+  padding: 12px;
+  background-color: #0093de;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+}
+
+.back:hover {
+  box-shadow: 3px 0px 30px rgba(163, 163, 163, 1);
+}
+.mensaje-error {
+  height: 45px;
+  line-height: 45px;
+  /* background: #f66060; */
+  background: #bb2929;
+  padding: 0px 15px;
+  border-radius: 3px;
+  grid-column: span 2;
+}
+.parrafo-error {
+  margin: 0;
+  color: #fff;
+}
+b {
+  margin-left: 10px;
 }
