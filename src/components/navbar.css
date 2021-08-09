@@ -50,9 +50,6 @@
   text-decoration: none;
   margin-bottom: 7px;
 }
-/* .estrella {
-  margin-top: 3px;
-} */
 
 .flex-logo1 {
   display: flex;
@@ -62,14 +59,3 @@
   background-color: red;
   color: blue;
 }
-/* .contador {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding-top: 30px;
-}
-
-.numero {
-  margin: 0 10px;
-} */

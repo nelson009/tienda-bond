@@ -5,6 +5,7 @@ import { ItemDetailContainer } from './components/ItemDetailContainer.js'
 import { Cart } from './components/Cart/Cart'
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import { Checkout } from './components/checkout/checkout'
+import { Footer } from './components/footer'
 export const App = () => {
   return (
     <Router>
@@ -27,6 +28,7 @@ export const App = () => {
             <Checkout/>
           </Route>
         </Switch>
+        <Footer/>
       </main>
     </Router>
   )

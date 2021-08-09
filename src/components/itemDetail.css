@@ -2,7 +2,7 @@
 .flex-detail {
   width: 70%;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

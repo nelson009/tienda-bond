@@ -1,0 +1,10 @@
+.flex-footer {
+  background-color: #1c2434;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.derechos {
+  font-weight: 700;
+}
